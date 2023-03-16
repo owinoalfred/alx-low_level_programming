@@ -1,2 +1,3 @@
 #!bin/bash
 cfile =$CFILE
+cpp -P $cfile -o c
