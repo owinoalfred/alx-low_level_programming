@@ -1,3 +1,2 @@
 #!bin/bash
-cfile =$CFILE
-cpp -P $cfile -o c
+gcc -E -o $CFILE
