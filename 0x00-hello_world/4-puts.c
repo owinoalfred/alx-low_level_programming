@@ -4,8 +4,8 @@
  * Desc: A program that prints Programming is like a multilingual puzzle
  */
 #include <stdio.h>
-
-int main(void)//this is the main function
+/*thi si the main program*/
+int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
 
