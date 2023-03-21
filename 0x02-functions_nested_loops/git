@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "fibonacci   func"
+git commit --m "this  func loops through "
 git push
