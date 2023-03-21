@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit --m "fibonnacii  patterns "
+git commit --m "fibonnacii 0x03s "
 git push
