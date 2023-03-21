@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit --m "correctiing thte mixed declarations3s "
+git commit --m "fibonacci 4 func"
 git push
