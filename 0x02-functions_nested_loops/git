@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "putchar in the sec file"
+git commit -m " this is a lower func"
 git push
