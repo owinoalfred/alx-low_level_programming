@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m " puts a sign func"
+git commit -m " last digits  func"
 git push
