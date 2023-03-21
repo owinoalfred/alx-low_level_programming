@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit --m "this  func loops through "
+git commit --m "fibonnacii  patterns "
 git push

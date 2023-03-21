@@ -5,14 +5,19 @@
  */
 int main(void)
 {
-int i, sum = 0; 
-for (i = 0; i < 1024; i++)
+int n, i, t1 = 1, t2 = 2, nextTerm;
+printf("First 50 Fibonacci numbers: ");
+for (i = 1; i <= 50; i++)
 {
-if (i % 3 == 0 || i % 5 == 0)
+printf("%d", t1);
+if (i < 50)
 {
-sum += i;
+printf(", ");
 }
-}    
-printf("%d\n", sum);    
-return (0);
+nextTerm = t1 + t2;
+t1 = t2;
+t2 = nextTerm;
+}
+printf("\n");
+return 0;
 }
