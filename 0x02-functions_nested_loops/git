@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "prints to 098  func"
+git commit -m "prints 100 times  func"
 git push
