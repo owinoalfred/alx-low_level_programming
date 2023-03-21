@@ -1,0 +1,4 @@
+#!/bin/bash
+git add .
+git commit -m " alx engeneering printin_poutchar"
+git push
