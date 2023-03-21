@@ -8,8 +8,10 @@ int prev_num = 1;
 int next_num;
 int curr_num = 2;
 int sum_even = 0;
-while (curr_num <= 4000000) {
-if (curr_num % 2 == 0) {
+while (curr_num <= 4000000)
+{
+if (curr_num % 2 == 0)
+{
 sum_even += curr_num;
 }
 next_num = prev_num + curr_num;
