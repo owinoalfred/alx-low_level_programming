@@ -8,10 +8,10 @@
 int main(void) {
 int i;
 unsigned long int a = 1, b = 2, c;
-printf("%lu, %lu", a, b);
+printf("%ld, %ld", a, b);
 for (i = 2; i < 98; i++) {
 c = a + b;
-printf(", %lu", c);
+printf(", %ld", c);
 a = b;
 b = c;
 }
