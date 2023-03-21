@@ -3,7 +3,7 @@
  * main - Entry point
  * Return: Always 0 (Success)
  */
-int main()
+int main(void)
 {
 int first = 1, second = 2, next, i;
 printf("%d, %d, ", first, second);
@@ -19,5 +19,5 @@ first = second;
 second = next;
 }
 printf("\n");
-return 0;
+return (0);
 }
