@@ -7,18 +7,18 @@
  */
 int main(void)
 {
-unsigned long int a, b, c;
 int i;
-a = 1;
-b = 2;
-printf("%lu, %lu", a, b);
-for (i = 3; i <= 98; i++)
+long int fib[100];
+fib[0] = 1;
+fib[1] = 2;
+for (i = 2; i < 100; i++)
 {
-c = a + b;
-printf(", %lu", c);
-a = b;
-b = c;
+fib[i] = fib[i - 1] + fib[i - 2];
 }
-printf("\n");
+for (i = 0; i < 98; i++)
+{
+printf("%ld, ", fib[i]);
+}
+printf("%ld\n", fib[98]);
 return (0);
 }
