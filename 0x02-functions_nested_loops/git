@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "adding two numbers  func"
+git commit -m "prints to 098  func"
 git push
