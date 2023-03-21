@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m " this is a lower func"
+git commit -m " puts a sign func"
 git push
