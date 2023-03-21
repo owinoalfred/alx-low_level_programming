@@ -10,11 +10,11 @@ int main()
 {
 int i;
 unsigned long fib1 = 1, fib2 = 2, fib3;
-printf("%llu, %llu, ", fib1, fib2);
+printf("%lu, %lu, ", fib1, fib2);
 for (i = 2; i < 98; i++)
 {
 fib3 = fib1 + fib2;
-printf("%llu", fib3);
+printf("%lu", fib3);
 if (i < 97)
 {
 printf(", ");
