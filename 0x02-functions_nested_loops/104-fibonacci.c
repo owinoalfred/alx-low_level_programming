@@ -1,16 +1,22 @@
 #include <stdio.h>
-
-int main(void)
+/**
+ * main - Entry point
+ * Return: Always 0 (Success)
+ */
+int main()
 {
-int n1 = 1, n2 = 2, n3, count = 0;
-printf("%d, %d", n1, n2);
-while (count < 96)
+int first = 1, second = 2, next, i;
+printf("%d, %d, ", first, second);
+for (i = 3; i <= 98; i++)
 {
-n3 = n1 + n2;
-printf(", %d", n3);
-n1 = n2;
-n2 = n3;
-count++;
+next = first + second;
+printf("%d", next);
+if (i != 98)
+{
+printf(", ");
+}
+first = second;
+second = next;
 }
 printf("\n");
 return 0;
