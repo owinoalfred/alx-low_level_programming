@@ -1,17 +1,13 @@
-#include "main.h"
-#include <stdio.h>
-
-void print_to_98(int n)
+/**
+ * add - Adds two integers and returns the result
+ *
+ * @num1: First integer to be added
+ * @num2: Second integer to be added
+ *
+ * Return: The sum of the two integers
+ */
+int add(int num1, int num2)
 {
-int i;
-if (n <= 98) {
-for (i = n; i < 98; i++) {
-printf("%d, ", i);
+return (num1 + num2);
 }
-} else {
-for (i = n; i > 98; i--) {
-printf("%d, ", i);
-}
-}
-printf("98\n");
-}
+
