@@ -6,18 +6,21 @@
  *
  * Return: Always 0.
  */
-
-int main(void)
+int main()
 {
-unsigned long int a = 1, b = 2, c;
 int i;
-printf("%lu, %lu", a, b);
-for (i = 3; i <= 98; i++)
+unsigned long long fib1 = 1, fib2 = 2, fib3;
+printf("%llu, %llu, ", fib1, fib2);
+for (i = 2; i < 98; i++)
 {
-c = a + b;
-printf(", %lu", c);
-a = b;
-b = c;
+fib3 = fib1 + fib2;
+printf("%llu", fib3);
+if (i < 97)
+{
+printf(", ");
+}
+fib1 = fib2;
+fib2 = fib3;
 }
 printf("\n");
 return (0);
