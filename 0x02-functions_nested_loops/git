@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m " time table  func"
+git commit -m " tim tablee  func"
 git push
