@@ -1,22 +1,23 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- * Return: Always 0 (Success)
+ * main - prints the first 98 Fibonacci numbers, separated by comma and space
+ * starting with 1 and 2, followed by a new line
+ *
+ * Return: Always 0.
  */
+
 int main(void)
 {
-int first = 1, second = 2, next, i;
-printf("%d, %d, ", first, second);
+unsigned long int a = 1, b = 2, c;
+int i;
+printf("%lu, %lu", a, b);
 for (i = 3; i <= 98; i++)
 {
-next = first + second;
-printf("%d", next);
-if (i != 98)
-{
-printf(", ");
-}
-first = second;
-second = next;
+c = a + b;
+printf(", %lu", c);
+a = b;
+b = c;
 }
 printf("\n");
 return (0);
