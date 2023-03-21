@@ -3,7 +3,8 @@
  * main - Entry point
  * Return: Always 0 (Success)
  */
-int main() {
+int main(void)
+{
 int prev_num = 1;
 int next_num;
 int curr_num = 2;
