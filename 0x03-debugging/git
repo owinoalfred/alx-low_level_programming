@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "no need to change the file but to jsut comment out the code"
+git commit -m "this code prints the largest number of three provided"
 git push
