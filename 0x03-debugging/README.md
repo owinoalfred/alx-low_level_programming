@@ -1,1 +1,1 @@
-THIS IS A READ ME FILE ABOUT THE DEBUGING
+this is a readme file
