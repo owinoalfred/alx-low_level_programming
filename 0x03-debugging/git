@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "this code prints the largest number of three uding a func "
+git commit -m "Editting the main.h"
 git push
