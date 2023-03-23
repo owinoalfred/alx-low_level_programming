@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "prints numbers in c "
+git commit -m "this is the fizz buzz func "
 git push
