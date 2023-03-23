@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "the rubber duck ddebugging session"
+git commit -m "Rubber duck task 1"
 git push
