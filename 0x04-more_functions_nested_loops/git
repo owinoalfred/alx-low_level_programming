@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "is digit s ot not "
+git commit -m "multiples "
 git push
