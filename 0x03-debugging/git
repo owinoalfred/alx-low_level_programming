@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "Editting the main.h"
+git commit -m "leap year skipped "
 git push
