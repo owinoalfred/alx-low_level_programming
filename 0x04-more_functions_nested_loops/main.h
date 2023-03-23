@@ -12,4 +12,6 @@ void print_square(int size);
 void print_most_numbers(void);
 int mul(int a, int b);
 void print_triangle(int size);
+void fizzBuzz(void);
+
 #endif
