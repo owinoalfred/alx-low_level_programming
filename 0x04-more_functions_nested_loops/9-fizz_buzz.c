@@ -1,27 +1,27 @@
 #include <stdio.h>
 
 /**
- * main - prints the largest prime factor of 612852475143
- *
- * Return: always 0
+ * main - Prints the first 50 Fibonacci numbers
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-unsigned long int number = 612852475143;
-unsigned long int factor = 2;
-unsigned long int largest_factor = 2;
-while (number > 1)
+int i;
+for (i = 1; i <= 100; i++)
 {
-if (number % factor == 0)
+if (i % 3 == 0 && i % 5 == 0)
 {
-largest_factor = factor;
-number /= factor;
-}
-else
+printf("FizzBuzz ");
+} else if (i % 3 == 0)
 {
-factor++;
+printf("Fizz ");
+} else if (i % 5 == 0)
+{
+printf("Buzz ");
+} else {
+printf("%d ", i);
 }
 }
-printf("%lu\n", largest_factor);
+printf("\n");
 return (0);
 }
