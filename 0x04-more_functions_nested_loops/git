@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "prints numbers in from thefunc "
+git commit -m "prints numbers in c "
 git push
