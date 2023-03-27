@@ -1,1 +1,4 @@
+#!/bin/bash
 git add .
+git commit -m "level 1 qn 1pointers"
+git push
