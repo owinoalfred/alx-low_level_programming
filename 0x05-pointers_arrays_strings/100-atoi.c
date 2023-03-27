@@ -17,15 +17,15 @@ sign *= -1;
 if (*s >= '0' && *s <= '9')
 {
 digit = *s - '0';
-result = result * 10 + sign * digit;
+result = result *10 + sign *digit;
 if (result > 0 && sign < 0)
-return INT_MIN;
+return (INT_MIN);
 else if (result < 0 && sign > 0)
-return INT_MAX;
+return (INT_MAX);
 }
 else if (result != 0)
 break;
 s++;
 }
-return result;
+return (result);
 }
