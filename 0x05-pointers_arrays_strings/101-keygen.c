@@ -5,9 +5,9 @@
 #define PASSWORD_LENGTH 63
 
 /**
- * main - Entry point
+ * main - Generates a random valid password for 101-crackme
  *
- * Return: Always 0 (Success)
+ * Return: 0 on success
  */
 int main(void)
 {
@@ -33,5 +33,5 @@ int main(void)
 
     printf("%s", password);
 
-    return (0);
+    return 0;
 }
