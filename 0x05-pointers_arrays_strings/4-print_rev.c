@@ -1,17 +1,23 @@
 #include "main.h"
 
 /**
- * print_alphabet - prints the alphabet, in lowercase, followed by a new line.
- *
+ * print_rev - prints string backwards
+ * @s: string
  * Return: void
  */
-void print_alphabet(void)
+
+void print_rev(char *s)
 {
-char letter = 'a';
-while (letter <= 'z')
+int i = 0;
+while (s[i] != '\0')
 {
-_putchar(letter);
-letter++;
+i++;
+}
+i--;
+while (i >= 0)
+{
+_putchar(s[i]);
+i--;
 }
 _putchar('\n');
 }
