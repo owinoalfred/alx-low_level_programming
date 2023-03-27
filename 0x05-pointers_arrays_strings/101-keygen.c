@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX_LEN 62
-#define PASSWORD_LEN 22
+#define PASSWORD_LENGTH 63
 
 /**
  * main - Entry point
@@ -12,17 +11,25 @@
  */
 int main(void)
 {
-    char password[PASSWORD_LEN + 1];
-const char *chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; 
-int i;
-    srand(time(NULL));
-    for (i = 0; i < PASSWORD_LEN; i++)
-    {
-        int idx = rand() % MAX_LEN;
-        password[i] = chars[idx];
-    }
+    char password[PASSWORD_LENGTH + 1];
+    int i, random_value;
 
-    password[PASSWORD_LEN] = '\0';
+    srand(time(NULL));
+
+    for (i = 0; i < PASSWORD_LENGTH; i++) {
+        random_value = rand() % 62;
+        if (random_value < 26) {
+            /* lowercase letter */
+            password[i] = 'a' + random_value;
+        } else if (random_value < 52) {
+            /* uppercase letter */
+            password[i] = 'A' + random_value - 26;
+        } else {
+            /* digit */
+            password[i] = '0' + random_value - 52;
+        }
+    }
+    password[PASSWORD_LENGTH] = '\0';
 
     printf("%s", password);
 
