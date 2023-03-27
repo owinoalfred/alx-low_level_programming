@@ -13,7 +13,7 @@
 int main(void)
 {
     char password[PASSWORD_LEN + 1];
-const char *chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; // Characters that can be used in the password
+const char *chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; 
 int i;
     srand(time(NULL));
     for (i = 0; i < PASSWORD_LEN; i++)
