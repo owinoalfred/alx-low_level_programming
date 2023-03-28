@@ -12,19 +12,21 @@
 
 int main(void)
 {
-  char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}\\|;:'\",.<>/?`~";
-  char password[PASSWORD_LENGTH + 1];
-  int i;
-
-  srand(time(NULL));
-
-  for (i = 0; i < PASSWORD_LENGTH; i++) {
-    password[i] = charset[rand() % sizeof(charset)];
-  }
-
-  password[PASSWORD_LENGTH] = '\0';
-
-  printf("%s\n", password);
-
-  return 0;
+        int len, i, temp;
+        char pass[PASSWORD_LENGTH];
+        srand(time(NULL));
+        len = (time(NULL) % 8) + 8;
+        for (i = 0; i < len; )
+        {
+                temp = rand() % 123;
+                if ((temp >= 65 && temp <= 90) || (temp >= 97 && temp <= 122))
+                        pass[i] = (char)temp;
+                else
+                        pass[i] = '0' + (temp % 10);
+                i++;
+        }
+        pass[i] = '\0';
+        for (i = 0; pass[i] != '\0'; i++)
+ 		putchar(pass[i]);
+ return (0);
 }
