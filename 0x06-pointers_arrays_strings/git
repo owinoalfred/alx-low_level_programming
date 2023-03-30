@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m " a function that encodes a string into 1337. "
+git commit -m "  function that encodes a string using rot13. "
 git push
