@@ -1,45 +1,56 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * infinite_add - adds two numbers stored as strings
- * @n1: the first number
- * @n2: the second number
- * @r: the buffer where the result is stored
- * @size_r: the size of the buffer
+ * infinite_add - adds two numbers.
  *
- * Return: a pointer to the result, or 0 if it can't be stored in r
+ *@n1: number 1
+ *@n2: number 2
+ *@r: buffer that the function will use to store the result
+ *@size_r: buffer size
+ *
+ * Return: string, or 0 if impossible
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int len1 = 0, len2 = 0, i, j, k, carry = 0;
-while (n1[len1])
-len1++;
-while (n2[len2])
-len2++;
-if (len1 + len2 + 1 > size_r)
-return (0);
-for (i = len1 - 1, j = len2 - 1, k = 0; k < size_r - 1 && (i >= 0 || j >= 0); i--, j--, k++)
-{
-int sum = carry;
-if (i >= 0)
-sum += n1[i] - '0';
-if (j >= 0)
-sum += n2[j] - '0';
-r[k] = (sum % 10) + '0';
-carry = sum / 10;
-}
-if (carry)
-{
-if (k >= size_r - 1)
-return (0);
-r[k++] = carry + '0';
-}
-r[k] = '\0';
-for (i = 0, j = k - 1; i < j; i++, j--)
-{
-char tmp = r[i];
-r[i] = r[j];
-r[j] = tmp;
-}
-return (r);
+	int l1, l2, k;
+	int biggest, sum, leftover;
+
+	for (l1 = 0; n1[l1] != '\0'; l1++)
+		;
+	for (l2 = 0; n2[l2] != '\0'; l2++)
+		;
+	l1--, l2--, size_r--;
+	if (l1 >= l2)
+		biggest = l1;
+	else
+		biggest = l2;
+	if (biggest + 2 <= size_r)
+	{
+		for (k = 0, leftover = 0; biggest >= 0; k++, l1--, l2--, biggest--)
+		{
+			sum = 0;
+			if (l1 >= 0 && l2 >= 0)
+				sum = (n1[l1] - '0') + (n2[l2] - '0') + leftover;
+			else if (l1 >= 0)
+				sum = (n1[l1] - '0') + leftover;
+			else
+				sum = (n2[l2] - '0') + leftover;
+			if (sum >= 10)
+			{
+				sum = sum - 10;
+				leftover = 1;
+			}
+			else
+				leftover = 0;
+			*(r + biggest + 1) = sum + '0';
+		}
+		if (leftover == 1)
+			*(r + 0) = leftover + '0';
+		for (k += 1; k <= size_r; k++)
+			*(r + k) = '\0';
+		return (r);
+	}
+	else
+		return (0);
 }
