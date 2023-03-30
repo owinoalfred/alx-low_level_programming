@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "a function that reverses the content of an array of integers.. "
+git commit -m "a function that changes all lowercase letters of a string to uppercase... "
 git push
