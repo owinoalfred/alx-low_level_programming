@@ -1,24 +1,23 @@
-include "main.h";
+#include "main.h"
 
 /**
-*infinite_add - adds two numbers stored as strings
-*@n1: first number to add
-*@n2: second number to add
-*@r: buffer to store the result
-*@size_r: size of the buffer
-*Return: pointer to the result or 0 if the result cannot be stored in r
-*/
+ * infinite_add - adds two numbers
+ * @n1: first number
+ * @n2: second number
+ * @r: buffer to store result
+ * @size_r: size of buffer
+ * Return: pointer to result
+ */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int len1 = 0, len2 = 0, carry = 0, sum = 0;
-int i, j;
-while (n1[len1])
-len1++;
-while (n2[len2])
-len2++;
-if (len1 + 2 > size_r || len2 + 2 > size_r)
+int i, j, k, l1, l2, sum, carry = 0;
+for (l1 = 0; n1[l1]; l1++)
+;
+for (l2 = 0; n2[l2]; l2++)
+;
+if (l1 + l2 + 1 > size_r)
 return (0);
-for (i = len1 - 1, j = len2 - 1; i >= 0 || j >= 0; i--, j--)
+for (i = l1 - 1, j = l2 - 1, k = 0; i >= 0 || j >= 0 || carry; i--, j--, k++)
 {
 sum = carry;
 if (i >= 0)
@@ -26,14 +25,13 @@ sum += n1[i] - '0';
 if (j >= 0)
 sum += n2[j] - '0';
 carry = sum / 10;
-r[i + 1] = sum % 10 + '0';
+r[k] = sum % 10 + '0';
 }
-if (carry)
+for (i = 0, j = k - 1; i < j; i++, j--)
 {
-if (len1 + 1 < size_r)
-r[0] = carry + '0';
-else
-return (0);
+char tmp = r[i];
+r[i] = r[j];
+r[j] = tmp;
 }
 return (r);
 }
