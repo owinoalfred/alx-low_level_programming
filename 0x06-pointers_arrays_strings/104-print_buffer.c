@@ -1,4 +1,5 @@
 include "main.h"
+
 /**
  * print_buffer - prints the content of a buffer
  * @b: the buffer to print
@@ -7,28 +8,27 @@ include "main.h"
 void print_buffer(char *b, int size)
 {
 int i, j;
-if (size <= 0)
+if (size <= 0) {
 printf("\n");
-for (i = 0; i < size; i += 10)
-{
+return;
+}
+for (i = 0; i < size; i += 10) {
 printf("%08x: ", i);
-for (j = i; j < i + 10; j++)
-{
-if (j < size)
-printf("%02x", *(b + j));
-else
+for (j = 0; j < 10; j++) {
+if (i + j < size) {
+printf("%02x", *(b + i + j));
+} else {
 printf("  ");
-if (j % 2)
+}
+if (j % 2) {
 printf(" ");
 }
-for (j = i; j < i + 10; j++)
-{
-if (j >= size)
+}
+for (j = 0; j < 10; j++) {
+if (i + j >= size) {
 break;
-if (*(b + j) >= 32 && *(b + j) <= 126)
-printf("%c", *(b + j));
-else
-printf(".");
+}
+printf("%c", *(b + i + j) >= ' ' && *(b + i + j) <= '~' ? *(b + i + j) : '.');
 }
 printf("\n");
 }

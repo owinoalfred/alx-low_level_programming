@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "  function that function that prints an integer.. "
+git commit -m "  function Write a function that prints a buffer. "
 git push
