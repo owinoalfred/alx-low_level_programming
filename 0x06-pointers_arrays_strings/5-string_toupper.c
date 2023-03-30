@@ -16,5 +16,5 @@ if (*p >= 'a' && *p <= 'z')
 }
 p++;
 }
-return str;
+return (str);
 }
