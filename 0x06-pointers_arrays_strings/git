@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add .
-git commit -m "this function concatenates the string The _strncat function is similar to the _strcat function, Write a function that copies a stringst "
+git commit -m "a function that compares two strings. "
 git push
