@@ -11,6 +11,8 @@ char *rot13(char *);
 void print_number(int n);
 int _putchar(char c);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
+void print_buffer(char *b, int size);
+void print_buffer(char *b, int size);
 char *string_toupper(char *);
 char *cap_string(char *);
 #endif /* MAIN_H */
