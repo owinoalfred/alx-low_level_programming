@@ -5,8 +5,8 @@
  * @s: string to be assessed.
  *@accept: This contains the characters to be matched in 's'.
 *
-* Return: This function returns the size of bytes 
-* in 's' that matches the bytes in the 'accept'.
+* Return: This function returns the size of bytes
+* * in 's' that matches the bytes in the 'accept'.
 */
 unsigned int _strspn(char *s, char *accept)
 {
