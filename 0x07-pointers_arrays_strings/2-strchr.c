@@ -8,15 +8,15 @@
  * Return: a pointer to the first occurence of the character
  * or a NULL if no character is matched.
  */
-char *_strchr(char *str, char c)
+char *_strchr(char *s, char c)
 {
 	int i;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (str[i] == c)
+		if (s[i] == c)
 
-			return (&str[i]);
+			return (&s[i]);
 	}
 	return (0);
 }
