@@ -10,7 +10,7 @@
 */
 
 /*
-1. Allocate memory for a new node.
+*1. Allocate memory for a new node.
 2. If the allocation fails, return NULL.
 3. Copy the string into a new buffer.
 4. If the string copy fails, free the new node and return NULL.
